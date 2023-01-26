@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+   int a=20,pos=4,k=0;
+   k=(a&(~(1<<pos-1)));
+   printf("%d",k);
+}
+   
