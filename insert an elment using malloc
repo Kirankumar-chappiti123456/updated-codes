@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define N sizeof(int)*8
+int main()
+{
+    int l=5,pos=2,ele=9;
+    int *ptr=(int*)malloc(l*sizeof(int));
+    for(int i=0;i<l;i++)
+    {
+        scanf("%d",ptr+i);
+    }
+    for(int i=0;i>=pos;i--)
+    {
+        ptr[i]=ptr[i-l];
+    }
+    ptr[pos-1]=ele;
+    l--;
+    for(int i=0;i<l;i++)
+    {
+        printf("%d",*(ptr+i));
+    }
+    
+}
